@@ -1,0 +1,23 @@
+{
+  "name": "subs",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@solana/spl-token": "^0.4.9",
+    "@solana/web3.js": "^1.98.0",
+    "bn.js": "^5.2.1",
+    "bs58": "^6.0.0",
+    "tweetnacl": "^1.0.3"
+  },
+  "engines": {
+    "node": "24.x"
+  },
+  "overrides": {
+    "rpc-websockets": {
+      "uuid": "^11.1.0"
+    }
+  },
+  "devDependencies": {
+    "@pump-fun/pump-sdk": "4.3.1"
+  }
+}

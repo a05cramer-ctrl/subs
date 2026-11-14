@@ -1,0 +1,24 @@
+{
+  "installCommand": "npm install --legacy-peer-deps",
+  "cleanUrls": true,
+  "functions": {
+    "api/claim.js": {
+      "maxDuration": 60
+    },
+    "api/register.js": {
+      "maxDuration": 30
+    },
+    "api/sign.js": {
+      "maxDuration": 30
+    },
+    "api/config.js": {
+      "maxDuration": 60
+    },
+    "api/coin.js": {
+      "maxDuration": 30
+    },
+    "api/channel.js": {
+      "maxDuration": 20
+    }
+  }
+}

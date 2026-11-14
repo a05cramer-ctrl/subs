@@ -1,0 +1,10 @@
+<!doctype html><meta charset="utf-8"><title>SUBS · Twitch login</title><meta name="robots" content="noindex">
+<body style="background:#0C0A12;color:#EFEAF8;font:600 16px system-ui;display:grid;place-items:center;height:100vh;margin:0">Logging you in…
+<script>
+const h=new URLSearchParams(location.hash.slice(1)),q=new URLSearchParams(location.search);
+const d={type:'subs-twitch',token:h.get('access_token'),state:h.get('state')||q.get('state'),error:q.get('error_description')||q.get('error'),t:Date.now()};
+history.replaceState(null,'',location.pathname);
+try{localStorage.setItem('subs-tw',JSON.stringify(d))}catch(e){}
+if(window.opener&&!window.opener.closed){try{window.opener.postMessage(d,location.origin);localStorage.removeItem('subs-tw')}catch(e){}window.close()}
+else location.replace('/');
+</script>
